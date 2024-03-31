@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "uname": "Juan",
+      "ulname": "Perez",
+      "pass": "123456",
+      "email":"juan@gmail.com",
+      "rol": "Administrador"
+    },
+    {
+      "uname": "Maria",
+      "ulname": "Quesada",
+      "pass": "12345",
+      "email":"maria@gmail.com",
+      "rol": "Secretaria",
+      "faangro": ""
+    },
+    {
+      "uname": "Pedro",
+      "ulname": "Marianao",
+      "pass": "1234",
+      "email":"pedro@gmail.com",
+      "rol": "Estudiante",
+      "faangro": "4-3-03"
+    },
+    {
+      "uname": "Fulano",
+      "ulname": "Martínez",
+      "pass": "123",
+      "email":"fulano@gmail.com",
+      "rol": "Jefe Año"
+    },
+    {
+      "uname": "Pedro2",
+      "ulname": "Marianao",
+      "pass": "12",
+      "email":"pedro2@gmail.com",
+      "rol": "Estudiante",
+      "faangro": "4-3-03"
+    }
+  ]
+}

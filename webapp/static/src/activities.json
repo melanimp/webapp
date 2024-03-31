@@ -1,0 +1,29 @@
+{
+  "act": [
+    {
+      "uname": "Parcial",
+      "type": "Academico",
+      "date": "12/12/2012"
+    },
+    {
+      "uname": "Matutino",
+      "type": "Politico Ideologico",
+      "date": "12/12/2012"
+    },
+    {
+      "uname": "Juegos Mellas",
+      "type": "Deportivo",
+      "date": "12/12/2012"
+    },
+    {
+      "uname": "UCIENCIA 2024",
+      "type": "Evento Científico",
+      "date": "12/12/2012"
+    },
+    {
+      "uname": "Festival de Artistas Aficionados",
+      "type": "Cultural",
+      "date": "12/12/2012"
+    }
+  ]
+}

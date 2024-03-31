@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/papers-favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- bootstrap@5.3.2/dist/css/bootstrap.min.css -->
+    <link
+      href="../../node_modules/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js -->
+    <script src="../../node_modules/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Iniciar Sesión</title>
+
+    <link rel="stylesheet" href="../../body-background.css" />
+  </head>
+  <body
+    class="d-flex flex-column justify-content-center align-items-center"
+    style="height: 100vh; max-height: 100vh; background-color: rgb(34, 34, 34)"
+  >
+    <div
+      class="card rounded-3 p-3 border border-1 border-dark bg-dark"
+      style="box-shadow: 0px 0px 28px rgb(37, 37, 37)"
+    >
+      <form action="" id="loginForm" class="was-validated d-grid text-light">
+        <h1 class="display-6 text-light text-center">Registrarse</h1>
+        <label for="uname" class="form-label">Rol:</label>
+        <select class="form-select">
+          <option>Estudiante</option>
+          <option>Jefe Año</option>
+          <option>Secretaria/o</option>
+          <option>Administrador</option>
+        </select>
+        <div>
+          <div class="mb-0 mt-3">
+            <label for="uname" class="form-label">Nombre:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="uname"
+              placeholder="Fulano"
+              name="uname"
+              required
+            />
+          </div>
+          <div class="mb-0 mt-3">
+            <label for="uname" class="form-label">Apellido:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="ulname"
+              placeholder="Quesada"
+              name="ulname"
+              required
+            />
+          </div>
+          <div class="mb-0 mt-3 text-light">
+            <label for="email" class="form-label">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="@gmail.com"
+              name="email"
+            />
+          </div>
+        </div>
+        <div class="mt-2 mb-3">
+          <label for="pwd" class="form-label text-light">Contraseña:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="pwd"
+            placeholder="******"
+            name="pswd"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+      </form>
+    </div>
+
+    <script src="./signup.js"></script>
+  </body>
+</html>

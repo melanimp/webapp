@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/papers-favicon.png"
+      type="image/x-icon"
+    />
+
+    <title>Actividades</title>
+
+    <!-- bootstrap@5.3.2/dist/css/bootstrap.min.css -->
+    <link
+      href="../../node_modules/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js -->
+    <script src="../../node_modules/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../../body-background.css" />
+  </head>
+  <body
+    class="d-flex flex-column bg-dark"
+    style="height: 100vh; max-height: 100vh"
+  >
+    <nav
+      class="navbar navbar-expand-sm navbar-dark bg-dark p-0"
+      style="box-shadow: 0px 0px 18px rgb(32, 32, 32)"
+    >
+      <div class="container-fluid">
+        <img
+          src="../../assets/papers-icon-32x32.png"
+          alt="papers-favicon-32x32.png"
+        />
+        <a class="navbar-brand m-1" href="../admin/admin.html">Actividades</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a id="nav-link" class="nav-link p-0 mt-2" href=""></a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="text"
+              placeholder="¿Necesitas buscar algo?"
+            />
+            <button class="btn btn-primary" type="button">Buscar</button>
+          </form>
+        </div>
+        <div class="dropdown">
+          <a
+            class="navbar-brand ms-2 dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+          >
+            <img
+              src="../../assets/img_avatar1.png"
+              alt="Avatar Logo"
+              style="width: 40px"
+              class="rounded-pill"
+            />
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-start py-0"
+            style="min-width: auto; max-width: 120px"
+          >
+            <li>
+              <a
+                class="dropdown-item rounded-2 text-dark"
+                style="background-color: transparent !important"
+                href="/logout"
+                ><img
+                  src="../../assets/exit.png"
+                  class="w-50 pe-1"
+                  alt=""
+                />Salir</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-3 text-light">
+      <h2>Listado de Actividades</h2>
+      <div class="d-flex justify-content-between">
+        <p class="d-flex align-items-center" style="font-size: 18px;">
+          A continuación se presenta una lista con las opciones de editar y
+          eliminar actividades respectivamente:
+        </p>
+        <a
+          href=""
+          class="d-flex text-decoration-none text-light align-items-center mb-3"
+          data-bs-toggle="modal"
+          data-bs-target="#myAddModal"
+          
+        >
+          <img
+            src="../../assets/add.png"
+            alt="Eliminar"
+            style="max-height: 30px"
+          />
+          <h3 class="display-6 mt-2" style="font-size: 28px;">Añadir</h3>
+        </a>
+      </div>
+      <table class="table table-dark table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Fecha</th>
+            <th>Opciones</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-usuarios"></tbody>
+      </table>
+    </div>
+
+    <!-- The Edit Modal -->
+    
+
+    <!-- The Delete Modal -->
+    
+
+    <!-- The Bell Modal -->
+    
+
+    <!-- The Add Modal -->
+    <div class="modal text-light" id="myAddModal">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Añadir Actividad</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form
+              action="/add_sactivities"
+              method="POST"
+              id="addForm"
+              class="was-validated d-grid text-light"
+              
+            >
+              <!-- <label for="uname" class="form-label">Rol:</label>
+              <select id="rol" class="form-select">
+                <option>Estudiante</option>
+                <option>Jefe Año</option>
+                <option>Secretaria/o</option>
+                <option>Administrador</option>
+              </select> -->
+              <div>
+                <div class="mb-0 mt-2">
+                  <label for="uname" class="form-label">Nombre:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="uname"
+                    placeholder="Nombre"
+                    name="uname"
+                    required
+                  />
+                </div>
+                <div class="mb-0 mt-2">
+                  <label for="ulname" id="pivot" class="form-label">Tipo:</label>
+                 
+                </div>
+                <div class="mb-0 mt-2 text-light">
+                  <label for="email" class="form-label">Fecha:</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="fecha"
+                    placeholder="Fecha"
+                    name="Fecha"
+                  />
+                </div>
+              </div>
+              <!-- <div class="mt-2 mb-0">
+                <label for="pwd" class="form-label text-light"
+                  >Contraseña:</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pwd"
+                  placeholder="******"
+                  name="pswd"
+                  required
+                />
+              </div> -->
+               <button type="submit" class="btn btn-primary btn-block">Enviar</button> 
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+          
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="activities.js"></script>
+  </body>
+</html>

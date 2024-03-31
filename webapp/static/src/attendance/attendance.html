@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/papers-favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- bootstrap@5.3.2/dist/css/bootstrap.min.css -->
+    <link
+      href="../../node_modules/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js -->
+    <script src="../../node_modules/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Asistencia</title>
+
+    <link rel="stylesheet" href="../../body-background.css" />
+  </head>
+  <body class="d-flex flex-column" style="height: 100vh; max-height: 100vh">
+    <nav
+      class="navbar navbar-expand-sm navbar-dark bg-dark p-0"
+      style="box-shadow: 0px 0px 28px rgb(37, 37, 37)"
+    >
+      <div class="container-fluid">
+        <img
+          src="../../assets/papers-icon-32x32.png"
+          alt="papers-favicon-32x32.png"
+        />
+        <a class="navbar-brand m-1" href="">Asistencia</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a id="nav-link" class="nav-link p-0 mt-2" href=""></a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="text"
+              placeholder="¿Necesitas buscar algo?"
+            />
+            <button class="btn btn-primary" type="button">Buscar</button>
+          </form>
+        </div>
+        <div class="dropdown">
+          <a
+            class="navbar-brand ms-2 dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+          >
+            <img
+              src="../../assets/img_avatar1.png"
+              alt="Avatar Logo"
+              style="width: 40px"
+              class="rounded-pill"
+            />
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-start py-0"
+            style="min-width: auto; max-width: 120px"
+          >
+            <li>
+              <a
+                class="dropdown-item rounded-2 text-dark"
+                style="background-color: transparent !important"
+                href="/logout"
+                ><img
+                  src="../../assets/exit.png"
+                  class="w-50 pe-1"
+                  alt=""
+                />Salir</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-3 text-light">
+      <h2>Listado de Asistencia</h2>
+      <p>
+        A continuación se presenta una lista con las opciones de editar y
+        eliminar asistencia respectivamente:
+      </p>
+      <table class="table table-dark table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Actividad</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Asistencia</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-usuarios"></tbody>
+      </table>
+    </div>
+
+    <!-- The Edit Modal -->
+    <div class="modal text-light" id="myEditModal">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Editar Asistencia</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form
+              action=""
+              id="loginForm"
+              class="was-validated d-grid text-light"
+            >
+              <div>
+                <label for="uname" class="form-label">Asistencia:</label>
+                <select
+                  id="asist"
+                  class="form-select"
+                  onchange="showFileUpload()"
+                >
+                  <option>No</option>
+                  <option>Si</option>
+                </select>
+                <div id="fileUpload" class="mb-0 mt-2">
+                  <label for="file" class="form-label">Subir archivo:</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="file"
+                    name="file"
+                  />
+                </div>
+              </div>
+              <!-- <button type="submit" class="btn btn-primary btn-block">Enviar</button> -->
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+              id="emodal-aceptar"
+            >
+              Aceptar
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Delete Modal -->
+    <div class="modal" id="myDeleteModal">
+      <div class="modal-dialog">
+        <div class="modal-content text-light bg-dark">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Eliminar Usuario</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            ¿Estás seguro que deseas eliminar el usuario?
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+              id="dmodal-aceptar"
+            >
+              Aceptar
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="attendance.js"></script>
+  </body>
+</html>

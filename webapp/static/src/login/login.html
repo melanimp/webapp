@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/papers-favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- bootstrap@5.3.2/dist/css/bootstrap.min.css -->
+    <link
+      href="../../node_modules/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js -->
+    <script src="../../node_modules/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Iniciar Sesión</title>
+
+    <link rel="stylesheet" href="../../body-background.css">
+  </head>
+  <body
+    class="d-flex flex-column justify-content-center align-items-center"
+    style="height: 100vh; max-height: 100vh;background-color: rgb(34, 34, 34);"
+  >
+    <div
+      class="card rounded-3 p-3 border border-1 border-dark bg-dark"
+      style="
+        box-shadow: 0px 0px 28px rgb(37, 37, 37);
+      "
+    >
+      <form action="/login" method="POST" id="loginForm" class="was-validated d-grid">
+        <h1 class="display-6 text-light text-center">Iniciar Sesión</h1>
+        <div class="mb-3 mt-3 text-light">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="@gmail.com" name="email">
+        </div>
+        <div class="mt-2 mb-3">
+          <label for="pwd" class="form-label text-light">Contraseña:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="pwd"
+            placeholder="******"
+            name="pswd"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Acceder</button>
+      </form>
+    </div>
+
+     <script src="./login.js"></script> 
+  </body>
+</html>

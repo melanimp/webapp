@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/papers-favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- bootstrap@5.3.2/dist/css/bootstrap.min.css -->
+    <link
+      href="../../node_modules/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js -->
+    <script src="../../node_modules/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Principal</title>
+
+    <link rel="stylesheet" href="../../body-background.css" />
+  </head>
+  <body class="d-flex flex-column" style="height: 100vh; max-height: 100vh">
+    <nav
+      class="navbar navbar-expand-sm navbar-dark bg-dark p-0"
+      style="box-shadow: 0px 0px 28px rgb(37, 37, 37)"
+    >
+      <div class="container-fluid">
+        <img
+          src="../../assets/papers-icon-32x32.png"
+          alt="papers-favicon-32x32.png"
+        />
+        <a class="navbar-brand m-1" href="">Principal</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a id="nav-link" class="nav-link p-0 mt-2" href=""></a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="text"
+              placeholder="¿Necesitas buscar algo?"
+            />
+            <button class="btn btn-primary" type="button">Buscar</button>
+          </form>
+        </div>
+        <div class="dropdown">
+          <a
+            class="navbar-brand ms-2 dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+          >
+            <img
+              src="../../assets/img_avatar1.png"
+              alt="Avatar Logo"
+              style="width: 40px"
+              class="rounded-pill"
+            />
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-start py-0"
+            style="min-width: auto; max-width: 120px"
+          >
+            <li>
+              <a
+                class="dropdown-item rounded-2 text-dark"
+                style="background-color: transparent !important"
+                href="/logout"
+                ><img
+                  src="../../assets/exit.png"
+                  class="w-50 pe-1"
+                  alt=""
+                />Salir</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="d-flex justify-content-center align-items-center">
+      <div
+        class="card m-2 mt-3 text-center"
+        style="width: 320px; height: 500px"
+      >
+        <img
+          class="card-img-top"
+          src="../../assets/img_avatar1.png"
+          alt="Card image"
+        />
+        <div class="d-flex flex-column justify-content-between card-body">
+          <h4 class="card-title">Actividades</h4>
+          <p class="card-text">Aquí puedes ver las actividades.</p>
+          <a href="../activities/activities.html" class="btn btn-primary"
+            >Ir a actividades</a
+          >
+        </div>
+      </div>
+      <div
+        class="card m-2 mt-3 text-center"
+        style="width: 320px; height: 500px"
+      >
+        <img
+          class="card-img-top"
+          src="../../assets/img_avatar1.png"
+          alt="Card image"
+        />
+        <div class="d-flex flex-column justify-content-between card-body">
+          <h4 class="card-title">Evidencias</h4>
+          <p class="card-text">Aquí puedes ver las evidencias.</p>
+          <a href="../evidence/evidence.html" class="btn btn-primary"
+            >Ir a evidencias</a
+          >
+        </div>
+      </div>
+      <div
+        class="card m-2 mt-3 text-center"
+        style="width: 320px; height: 500px"
+      >
+        <img
+          class="card-img-top"
+          src="../../assets/img_avatar1.png"
+          alt="Card image"
+        />
+        <div class="d-flex flex-column justify-content-between card-body">
+          <h4 class="card-title">Asistencia</h4>
+          <p class="card-text">Aquí puedes tomar y ver la asistencia.</p>
+          <a href="../attendance/attendance.html" class="btn btn-primary"
+            >Ir a asistencia</a
+          >
+        </div>
+      </div>
+      <div
+        class="card m-2 mt-3 text-center"
+        style="width: 320px; height: 500px"
+      >
+        <img
+          class="card-img-top"
+          src="../../assets/img_avatar1.png"
+          alt="Card image"
+        />
+        <div class="d-flex flex-column justify-content-between card-body">
+          <h4 class="card-title">Perfiles</h4>
+          <p class="card-text">
+            Aquí puedes manejar los perfiles de los estudiantes.
+          </p>
+          <a href="../profiles/profiles.html" class="btn btn-primary"
+            >Ir a perfiles</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="jefeaview.html"></script>
+  </body>
+</html>
