@@ -188,7 +188,6 @@ def send_sactivities(request):  #
 				z[count][k] = str(i[k])
 		count += 1
 	body = json.dumps({"act": z})
-	print(body)
 	return HttpResponse(body, "application/json")
 
 

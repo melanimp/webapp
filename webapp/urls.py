@@ -23,14 +23,14 @@ from web import apirest, views
 
 urlpatterns = [
     path('admin', admin.site.urls),
-    path('login', apirest.login),
-    path('logout', apirest.logout),
-    path('send_evidence', apirest.send_evidence),
+    path('login', apirest.login, name="login"),
+    path('logout', apirest.logout, name="logout"),
+    path('send_evidence', apirest.send_evidence, name="send_evidence"),
     path('edit_evidence', apirest.edit_evidence),
     path('delete_evidence', apirest.revidence),
     path('add_evidence', apirest.subir_evidence),
     path('send_csv', apirest.send_csv),
-    path('send_sactivities', apirest.send_sactivities),
+    path('send_sactivities', apirest.send_sactivities, name="send_sactivities"),
     path('send_type', apirest.send_type),
     path('send_rol', apirest.send_rol),
     path('send_activities', apirest.send_activities),
